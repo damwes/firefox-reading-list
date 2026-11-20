@@ -1,5 +1,14 @@
 {
   "manifest_version": 3,
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "firefox-reading-list@damwes.com",
+      "data_collection_permissions": {
+        "required": ["none"]
+      },
+      "strict_min_version": "140.0"
+    }
+  },
 
   "name": "Reading List",
   "description": "A simple and system colors reading list",
