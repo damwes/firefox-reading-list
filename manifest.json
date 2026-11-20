@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+
+  "name": "Reading List",
+  "description": "A simple and system colors reading list",
+  "homepage_url": "https://github.com/damwes/firefox-reading-list",
+  "version": "1.0.0",
+  "icons": {
+    "48": "assets/icons/icon.svg"
+  },
+
+  "background": {
+    "scripts": ["./scripts/background.js"]
+  },
+  "action": {
+    "default_area": "navbar",
+    "default_title": "Open Sidebar"
+  },
+  "sidebar_action": {
+    "default_title": "Reading List",
+    "default_panel": "sidebar.html"
+  },
+
+  "permissions": ["tabs", "activeTab", "storage"],
+  "host_permissions": ["http://*/*", "https://*/*"]
+}
