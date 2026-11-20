@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  min-height: 100%;
+  color: CanvasText;
+  background-color: Canvas;
+  font-family: sans-serif;
+}
+
+main {
+  margin-left: 8px;
+  margin-right: 16px;
+  border-radius: 8px;
+  background-color: ButtonFace;
+  overflow: hidden;
+}
+
+.accordion {
+  cursor: pointer;
+  padding: 14px 16px 12px;
+  width: 100%;
+  color: ButtonText;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: ButtonFace;
+  }
+
+  &:after {
+    content: "\02795"; /* Unicode character for "plus" sign (+) */
+    margin-left: 6px;
+    filter: brightness(2);
+    color: ButtonText;
+    font-size: 13px;
+    float: right;
+  }
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+  max-height: 0;
+  background-color: ButtonFace;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.site-box {
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  background-color: ButtonFace;
+
+  &:hover .site-actions button {
+    display: block;
+  }
+}
+
+.site-favicon {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: Canvas;
+  border-radius: 4px;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.site-header {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+}
+
+.site-heading {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.site-title {
+  color: CanvasText;
+  font-size: 14px;
+
+  filter: opacity(90%);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.site-link {
+  color: LinkText;
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  button {
+    display: none;
+    cursor: pointer;
+
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    border: none;
+
+    img {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+
+#add-curr-tab {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+
+  margin: 16px;
+  padding-inline: 8px;
+  height: 36px;
+
+  color: ButtonText;
+  background-color: ButtonFace;
+  border-radius: 8px;
+  border: none;
+}
