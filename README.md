@@ -2,7 +2,7 @@
 
 # Firefox Reading List
 
-A minimal Firefox extension for saving pages to read later.
+A simple reading list firefox extension for saving pages to read later.
 
 ## How to use:
 - Click the browser action (a button in a panel) to open or close the sidebar.
